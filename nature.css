@@ -13,14 +13,17 @@ Date de création : 06/04/2020
 
 .nature {
     height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+
     background: url(./ressources/home.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    flex-direction: column;
+    background-attachment: fixed;
+    
+    overflow: hidden;
 }

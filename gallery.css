@@ -18,10 +18,15 @@ Date de création : 06/04/2020
     justify-content: center;
     position: relative;
     flex-direction: column;
+    overflow: hidden;
 }
 
 .galerie-photos .content {
     padding: 0;
+}
+
+.galerie-photos h1 {
+    padding: 8px 0 8px 0;
 }
 
 .container-gallery {

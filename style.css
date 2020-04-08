@@ -7,6 +7,7 @@ Date de création : 06/04/2020
 CSS GLOBAL (suceptible d'être sur toutes les pages)
 - Body & Text
 - Navbar
+- Navbar Mobile
 - Header
 - Footer
 - Animation 
@@ -29,6 +30,7 @@ h1 {
     font-family: 'Limelight', cursive;
     font-size: 3em;
     text-align: center;
+    padding-top: 20px;
 }
 
 h2 {
@@ -45,7 +47,6 @@ a {
 
 
 /*** NAVBAR DESKTOP ********************************************/
-
 
 nav {
     height: auto;
@@ -97,53 +98,54 @@ nav img {
 }
 
 
-            /*** MENU MOBILE *************************/
-            @media screen and (max-width:576px) {
-                nav {
-                    display: none;
-                }
+/*** NAVBAR MOBILE *************************/
 
-                #menu-mobile {
-                    display: block;
-                    height: auto;
-                    width: 10em;
-                    position: absolute;
-                    right: -3em;
-                    z-index: 1;
-                }
+@media screen and (max-width:576px) {
+    nav {
+        display: none;
+    }
 
-                #menu-mobile ul li {
-                    position: relative;
-                    list-style: none;
-                    border-radius: 40px;
-                    box-shadow: 0px 0px 5px black;
-                    margin: 1em;
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
-                    cursor: pointer;
+    #menu-mobile {
+        display: block;
+        height: auto;
+        width: 10em;
+        position: absolute;
+        right: -3em;
+        z-index: 1;
+    }
 
-                    height: 2.5em;
-                    background-color: #468594;
-                }
+    #menu-mobile ul li {
+        position: relative;
+        list-style: none;
+        border-radius: 40px;
+        box-shadow: 0px 0px 5px black;
+        margin: 1em;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
 
-                #menu-mobile ul li:hover {
-                    transform: translateX(0);
-                }
+        height: 2.5em;
+        background-color: #468594;
+    }
 
-                #menu-mobile ul li a {
-                    font-size: 0.55em;
-                    color: white;
-                    text-decoration: none;
-                    text-transform: uppercase;
-                    font-weight: 600;
-                    margin-left: 1em;
-                }
+    #menu-mobile ul li:hover {
+        transform: translateX(0);
+    }
 
-                #menu-mobile img {
-                    display: none;
-                }
-            }
+    #menu-mobile ul li a {
+        font-size: 0.55em;
+        color: white;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: 600;
+        margin-left: 1em;
+    }
+
+    #menu-mobile img {
+        display: none;
+    }
+}
 
 
 /*** HEADER ********************************************/
@@ -160,10 +162,10 @@ nav img {
     justify-content: center;
     position: relative;
     flex-direction: column;
+    overflow: hidden;
 }
 
 .cadre {
-
     position: relative;
     width: 50%;
     animation: fadeIn 2s;
@@ -232,14 +234,35 @@ nav img {
     height: 50px;
 }
 
-            /*** RESPONSIVE ***/
-            @media screen and (max-width: 900px) {
+.button {
+    margin: 0 auto;
+    margin-top: 50px;
+    background-color: #468594;
+    padding: 10px;
+    width: 30%;
+    text-align: center;
+    animation: pulse 1.5s;
+    animation-delay: 3s;
+}
+
+.button a {
+    text-transform: uppercase;
+    font-size: 1em;
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+            /*** RESPONSIVE *************************************/
+            @media screen and (max-width: 992px) {
                 h1 {
                     font-size: 2.5em;
                 }
+
                 .logo img {
                     height: 80px;
                 }
+
                 .reseaux img {
                     height: 30px;
                 }
@@ -250,38 +273,60 @@ nav img {
                 }
             }
 
-            @media screen and (max-width: 700px) {
+            @media screen and (max-width: 768px) {
                 h1 {
                     font-size: 2em;
                 }
+
                 p {
                     font-size: 0.8em;
                 }
+
                 .cadre {
                     width: 60%;
                 }
+
                 .content {
                     padding: 0 20px 20px 20px;
                     ;
                 }
+
+                .button a {
+                    font-size: 0.8em;
+                }
             }
 
-            @media screen and (max-width: 500px) {
+            @media screen and (max-width: 576px) {
                 h1 {
                     font-size: 1em;
                 }
+
                 p {
                     font-size: 0.7em;
                 }
+
+                .reseaux {
+                    position: relative;
+                    right: 0;
+                    bottom: -100px;
+                }
+
                 .reseaux img {
                     height: 25px;
                 }
 
                 .cadre {
-                    margin-right: 5%
+                    margin-right: 25%
                 }
-                .button a {
-                    font-size: 0.7em;
+
+                .button {
+                    display: none;
+                }
+
+                .logo {
+                    position: relative;
+                    top: -80px;
+                    right: 0;
                 }
             }
 
@@ -303,25 +348,6 @@ footer {
 footer p,
 footer a {
     color: white;
-}
-
-.button {
-    margin: 0 auto;
-    margin-top: 50px;
-    background-color: #468594;
-    padding: 10px;
-    width: 30%;
-    text-align: center;
-    animation: pulse 1.5s;
-    animation-delay: 3s;
-}
-
-.button a {
-    text-transform: uppercase;
-    font-size: 1em;
-    color: white;
-    font-weight: 600;
-    text-decoration: none;
 }
 
 
@@ -416,22 +442,22 @@ footer a {
 
 @keyframes pulse {
     from {
-      -webkit-transform: scale3d(1, 1, 1);
-      transform: scale3d(1, 1, 1);
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
     }
-  
+
     50% {
-      -webkit-transform: scale3d(1.1, 1.1, 1.1);
-      transform: scale3d(1.1, 1.1, 1.1);
+        -webkit-transform: scale3d(1.1, 1.1, 1.1);
+        transform: scale3d(1.1, 1.1, 1.1);
     }
-  
+
     to {
-      -webkit-transform: scale3d(1, 1, 1);
-      transform: scale3d(1, 1, 1);
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
     }
-  }
-  
-  .pulse {
+}
+
+.pulse {
     -webkit-animation-name: pulse;
     animation-name: pulse;
-  }
+}
