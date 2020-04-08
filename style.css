@@ -60,6 +60,7 @@ footer {
     align-items: center;
     justify-content: center;
     color: white;
+    margin-top: 50px;
 }
 
 footer p,
@@ -219,6 +220,7 @@ nav img {
 .content p {
     padding-top: 40px;
     color: white;
+    text-align: center;
 }
 
 .logo {
