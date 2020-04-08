@@ -26,6 +26,10 @@ Sommaire :
     box-sizing: border-box;
 }
 
+body {
+    background-color: #f2f0f2;
+}
+
 h1 {
     color: white;
     font-family: 'Limelight', cursive;
@@ -304,10 +308,6 @@ nav img {
     height: auto;
 }
 
-#ile-dyeu {
-    background-color: #f2f0f2;
-}
-
 .presentation {
     height: 100vh;
     display: flex;
@@ -488,6 +488,38 @@ nav img {
     .box .click {
         color: white;
     }
+}
+
+/*** SECURITE ********************************************/
+
+.securite {
+    height: 100vh;
+    background: url(./ressources/home.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    flex-direction: column;
+}
+
+/*** NATURE ********************************************/
+
+.nature {
+    height: 100vh;
+    background: url(./ressources/home.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    flex-direction: column;
 }
 
 /*** ANIMATION ********************************************/
