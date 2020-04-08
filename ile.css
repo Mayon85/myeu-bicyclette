@@ -1,0 +1,67 @@
+/* 
+
+Projet : M'YEU à bicyclette
+Auteure : Marion Deglorie
+Date de création : 06/04/2020
+
+
+
+!!! CSS Page Présentation de l'Île d'Yeu !!!
+
+
+/*** PRESENTATION **********************************************/
+
+.logo-menu {
+    width: 70px;
+    height: auto;
+}
+
+.presentation {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    background: url(./ressources/home.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+#page-presentation {
+    padding: 150px 0 100px 0;
+    width: 70%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.histoire {
+    display: flex;
+}
+
+.histoire-text {
+    color: #333333;
+    display: flex;
+    flex-direction: column;
+    margin: 50px;
+}
+
+.histoire img {
+    height: 200px;
+}
+
+.histoire h2 {
+    position: relative;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.histoire h2:after {
+    content: '';
+    border: solid 3.5px #468594;
+    width: 50px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}

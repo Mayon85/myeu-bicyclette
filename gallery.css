@@ -1,0 +1,97 @@
+/* 
+
+Projet : M'YEU à bicyclette
+Auteure : Marion Deglorie
+Date de création : 06/04/2020
+
+
+
+!!! CSS Page Galerie Photos !!!
+
+
+/*** GALERIE PHOTOS ********************************************/
+
+.galerie-photos {
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    flex-direction: column;
+}
+
+.galerie-photos .content {
+    padding: 0;
+}
+
+.container-gallery {
+    width: 80%;
+    margin: auto;
+    display: grid;
+    grid-auto-flow: dense;
+    grid-template: "1fr 1fr 1fr 1fr 1fr" 33.33vh
+                   "1fr 1fr 1fr 1fr 1fr" 33.33vh
+                   "1fr 1fr 1fr 1fr 1fr" 33.33vh
+                   "1fr 1fr 1fr 1fr 1fr" 33.33vh;
+    grid-gap: 5px;
+}
+
+.container-gallery .box {
+    position: relative;
+    background: tomato;
+}
+
+.container-gallery .box img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.container-gallery .box.a {
+    grid-row: span 2;
+}
+
+.container-gallery .box.b,
+.container-gallery .box.f,
+.container-gallery .box.h,
+.container-gallery .box.j,
+.container-gallery .box.l {
+    grid-column: span 2;
+}
+
+@media screen and (max-width: 900px) {
+    .container-gallery {
+        grid-template: "1fr 1fr 1fr" 250px
+                       "1fr 1fr 1fr" 250px
+                       "1fr 1fr 1fr" 250px
+                       "1fr 1fr 1fr" 250px
+                       "1fr 1fr 1fr" 250px
+                       "1fr 1fr 1fr" 250px
+                       "1fr 1fr 1fr" 250px; 
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .container-gallery {
+        grid-template: "1fr 1fr" 200px
+                       "1fr 1fr" 200px
+                       "1fr 1fr" 200px
+                       "1fr 1fr" 200px
+                       "1fr 1fr" 200px
+                       "1fr 1fr" 200px
+                       "1fr 1fr" 200px
+                       "1fr 1fr" 200px
+                       "1fr 1fr" 200px
+                       "1fr 1fr" 200px
+                       "1fr 1fr" 200px; 
+    }
+
+    .container-gallery .box.l {
+        grid-column: span 1;
+    }
+}
+
+
