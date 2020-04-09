@@ -5,16 +5,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>M'YEU à bicyclette</title>
+    <title>Les Balades à vélo sur l'île d'Yeu</title>
     <meta name="description"
-        content="L'Île d'Yeu, paradis vendéen propice aux balades en 2 roues. Enfourchez votre vélo et profitez des trésors de l'île à travers nos balades">
+        content="L'Île d'Yeu est plus adaptée à la circulation des vélos que des voitures. Suivez nos 4 itinéraires pour découvrir les trésors de l'île">
 
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="balades.css">
+<!-- CSS ------------------------>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="balades.css">
+
+<!-- ICONS & FONTS ------------------------>  
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800&display=swap"
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Limelight&display=swap" rel="stylesheet">
+
 </head>
 
 
@@ -80,13 +84,21 @@
                         <img src="./ressources/2.jpg" alt="">
                     </div>
 
-                    <div class="click">
-                        <i class="fas fa-biking"></i>
-                    </div>
-
                     <div class="box-content">
-                        <h2>L'incontournable</h2>
-                        <p>Le tour de l'île Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+
+                        <!-- Trigger/Open The Modal -->
+                        <button id="btn-incontournable" class="btn-balade">L'incontournable</button>
+
+                        <!-- The Modal -->
+                        <div id="balade1" class="modal-balade">
+
+                        <!-- Modal content -->
+                        <div class="modal-content-balade">
+                            <span class="close">&times;</span>
+                            <p>Some text in the Modal..</p>
+                        </div>
+
+                        </div> 
                     </div>
                 </div>
 
@@ -101,13 +113,9 @@
                         <img src="./ressources/2.jpg" alt="">
                     </div>
 
-                    <div class="click">
-                        <i class="fas fa-biking"></i>
-                    </div>
-
                     <div class="box-content">
                         <h2>L'historique</h2>
-                        <p>La citadelle, le vieux château Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+
                     </div>
                 </div>
 
@@ -121,13 +129,8 @@
                         <img src="./ressources/2.jpg" alt="">
                     </div>
 
-                    <div class="click">
-                        <i class="fas fa-biking"></i>
-                    </div>
-
                     <div class="box-content">
                         <h2>L'insolite</h2>
-                        <p>Le phare Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
                     </div>
                 </div>
 
@@ -141,14 +144,8 @@
                         <img src="./ressources/2.jpg" alt="">
                     </div>
 
-                    <div class="click">
-                        <i class="fas fa-biking"></i>
-                    </div>
-
                     <div class="box-content">
                         <h2>L'instinctive</h2>
-                        <p>Meule, plade des vieilles de l'île Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                        </p>
                     </div>
                 </div>
 
@@ -169,6 +166,8 @@
         </p>
     </footer>
 
+<!-- JAVASCRIPT ------------------------>
+<script src="script.js"></script>
 
 </body>
 

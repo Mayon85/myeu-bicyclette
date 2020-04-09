@@ -5,16 +5,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>M'YEU à bicyclette</title>
+    <title>Présentation de l'île d'Yeu</title>
     <meta name="description"
-        content="L'Île d'Yeu, paradis vendéen propice aux balades en 2 roues. Enfourchez votre vélo et profitez des trésors de l'île à travers nos balades">
+        content="L'Île d'Yeu est riche en histoires, en paysages et en beauté ! Baignée dans l'océan Atlantique, c'est un vrai trésor du département de la Vendée">
 
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="ile.css">
+<!-- CSS ------------------------>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="ile.css">
+
+<!-- ICONS & FONTS ------------------------>  
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800&display=swap"
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Limelight&display=swap" rel="stylesheet">
+
 </head>
 
 
@@ -78,14 +82,27 @@
                     cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum.
                 </p>
             </div>
-            <div class="histoire-img">
-                <img src="./ressources/1.jpg" alt="">
+
+            <img id="histoire-img" src="./ressources/chateau.jpg" alt="Photo du Vieux Château">
+
+            <!-- The Modal -->
+            <div id="myModal-chateau" class="modal">
+            
+              <!-- The Close Button -->
+              <span class="close">&times;</span>
+            
+              <!-- Modal Content (The Image) -->
+              <img class="modal-content" id="img-chateau">
+            
+              <!-- Modal Caption (Image Text) -->
+              <div id="caption-chateau" class="caption"><p>Le Vieux Château, château fort du XIVème siècle</p></div>
             </div>
 
         </div>
+
         <div class="histoire" style="flex-direction: row-reverse;">
 
-            <div class="histoire-text">
+            <div class="histoire-text text2">
                 <h2>La vie des Islais à Yeu</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed
                     cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum.
@@ -94,14 +111,26 @@
                 </p>
             </div>
 
-            <div class="histoire-img">
-                <img src="./ressources/1.jpg" alt="">
+            <img id="vie-img" src="./ressources/fete-fleurs.jpg" alt="Photo de la fête des fleurs à l'Île d'Yeu">
+
+            <!-- The Modal -->
+            <div id="myModal-vie" class="modal">
+            
+              <!-- The Close Button -->
+              <span class="close">&times;</span>
+            
+              <!-- Modal Content (The Image) -->
+              <img class="modal-content" id="img-fetefleur">
+            
+              <!-- Modal Caption (Image Text) -->
+              <div id="caption-vie" class="caption">La Fête des fleurs est célébrée tous les deux ans sur l'Île d'Yeu</div>
             </div>
+
         </div>
 
         <div class="histoire">
 
-            <div class="histoire-text">
+            <div class="histoire-text text3">
                 <h2>Comment venir à l'Île d'Yeu</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed
                     cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum.
@@ -110,18 +139,99 @@
                 </p>
             </div>
 
-            <div class="histoire-img">
-                <img src="./ressources/1.jpg" alt="">
+            <img id="venir-img" src="./ressources/bateau.jpg" alt="Photos de bâteaux au port">
+
+            <!-- The Modal -->
+            <div id="myModal-vivre" class="modal">
+            
+              <!-- The Close Button -->
+              <span class="close">&times;</span>
+            
+              <!-- Modal Content (The Image) -->
+              <img class="modal-content" id="img-bateau">
+            
+              <!-- Modal Caption (Image Text) -->
+              <div id="caption-bateau" class="caption">Le bâteau est le transport principal pour accéder à l'île</div>
             </div>
+
         </div>
 
         <div class="button"><a href="balades.html">Découvrir les balades à vélo</a></div>
 
     </section>
 
+
+
     <!-- PETITE GALERIE PHOTOS ------------------------>
 
-
+ <!-- Images used to open the lightbox -->
+ <div class="row">
+    <div class="column">
+      <img src="./ressources/1.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow">
+    </div>
+    <div class="column">
+      <img src="./ressources/1.jpg" onclick="openModal();currentSlide(2)" class="hover-shadow">
+    </div>
+    <div class="column">
+      <img src="./ressources/img.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow">
+    </div>
+    <div class="column">
+      <img src="./ressources/img.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow">
+    </div>
+  </div>
+  
+  <!-- The Modal/Lightbox -->
+  <div id="myModal" class="modal">
+    <span class="close cursor" onclick="closeModal()">&times;</span>
+    <div class="modal-content">
+  
+      <div class="mySlides">
+        <div class="numbertext">1 / 4</div>
+        <img src="./ressources/1.jpg" style="width:100%">
+      </div>
+  
+      <div class="mySlides">
+        <div class="numbertext">2 / 4</div>
+        <img src="./ressources/1.jpg" style="width:100%">
+      </div>
+  
+      <div class="mySlides">
+        <div class="numbertext">3 / 4</div>
+        <img src="./ressources/img.jpg" style="width:100%">
+      </div>
+  
+      <div class="mySlides">
+        <div class="numbertext">4 / 4</div>
+        <img src="./ressources/img.jpg" style="width:100%">
+      </div>
+  
+      <!-- Next/previous controls -->
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  
+      <!-- Caption text -->
+      <div class="caption-container">
+        <p id="caption"></p>
+      </div>
+  
+      <!-- Thumbnail image controls -->
+      <div class="column">
+        <img class="demo" src="img1.jpg" onclick="currentSlide(1)" alt="Nature">
+      </div>
+  
+      <div class="column">
+        <img class="demo" src="img2.jpg" onclick="currentSlide(2)" alt="Snow">
+      </div>
+  
+      <div class="column">
+        <img class="demo" src="img3.jpg" onclick="currentSlide(3)" alt="Mountains">
+      </div>
+  
+      <div class="column">
+        <img class="demo" src="img4.jpg" onclick="currentSlide(4)" alt="Lights">
+      </div>
+    </div>
+  </div> 
 
 
     <footer>
@@ -131,6 +241,9 @@
             Made with love by Marion
         </p>
     </footer>
+
+<!-- JAVASCRIPT ------------------------>
+<script src="script.js"></script>
 
 </body>
 

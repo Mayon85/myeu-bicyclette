@@ -22,7 +22,9 @@ CSS GLOBAL (suceptible d'être sur toutes les pages)
 }
 
 body {
-    background-color: #f2f0f2;
+    background: url(./ressources/background.jpg);
+    background-position: center;
+    background-size: cover;
 }
 
 h1 {
@@ -97,6 +99,10 @@ nav img {
     display: none;
 }
 
+.logo-menu {
+    width: 70px;
+    height: auto;
+}
 
 /*** NAVBAR MOBILE *************************/
 
