@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800&display=swap"
         rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Overlock:wght@400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Overlock:wght@400;700;900&display=swap" rel="stylesheet">
 
 </head>
 
@@ -27,7 +27,7 @@
 
 <body>
 
-    <header class="presentation">
+    <header id="presentation">
 
         <nav>
             <ul>
@@ -70,7 +70,7 @@
 
     </header>
 
-    <section id="page-presentation">
+    <section class="page-presentation">
 
         <div class="histoire">
 
@@ -102,9 +102,13 @@
 
         </div>
 
-        <div class="histoire" style="flex-direction: row-reverse;">
+    </section>
 
-            <div class="histoire-text text2">
+    <section class="page-presentation-reverse">
+
+        <div class="histoire histoire-reverse">
+
+            <div class="histoire-text">
                 <h2>La vie des Islais à Yeu</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed
                     cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum.
@@ -113,7 +117,7 @@
                 </p>
             </div>
 
-            <img id="vie-img" src="./ressources/fete-fleurs.jpg" alt="Photo de la fête des fleurs à l'Île d'Yeu">
+            <img id="vie-img" src="./ressources/chateau.jpg" alt="Photo de la fête des fleurs à l'Île d'Yeu">
 
             <!-- The Modal -->
             <div id="myModal-vie" class="modal">
@@ -131,9 +135,13 @@
 
         </div>
 
+    </section>
+
+    <section class="page-presentation">
+
         <div class="histoire">
 
-            <div class="histoire-text text3">
+            <div class="histoire-text">
                 <h2>Comment venir à l'Île d'Yeu</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed
                     cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum.
@@ -159,83 +167,96 @@
 
         </div>
 
-        <div class="button"><a href="balades.html">Découvrir les balades à vélo</a></div>
-
     </section>
 
-
+    <div class="button button-home">
+        <a href="balades.html">Découvrir les balades à vélo</a>
+    </div>
 
     <!-- PETITE GALERIE PHOTOS ------------------------>
 
-    <!-- Images used to open the lightbox -->
-    <div class="row">
-        <div class="column">
-            <img src="./ressources/gallery/pointe-but-aerodrome-phare.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow">
+    <section id="small-gallery">
+        <div class="small-gallery">
+            <h3>•• Vues aériennes de l'Île d'Yeu ••</h3>
+
+            <!-- Images used to open the lightbox -->
+            <div class="row">
+                <div class="column">
+                    <img src="./ressources/gallery/pointe-but-aerodrome-phare.jpg"
+                        alt="Vue aérienne de l'aérodrome vers la pointe du but" onclick="openModal();currentSlide(1)"
+                        class="hover-shadow">
+                </div>
+                <div class="column">
+                    <img src="./ressources/gallery/plage-moulin.jpg" alt="Vue aérienne de la plage du cours Moulin"
+                        onclick="openModal();currentSlide(2)" class="hover-shadow">
+                </div>
+                <div class="column">
+                    <img src="./ressources/gallery/vieux-chateau.jpg" alt="Vue aérienne du Vieux château"
+                        onclick="openModal();currentSlide(3)" class="hover-shadow">
+                </div>
+                <div class="column">
+                    <img src="./ressources/gallery/plage-sabia-helico.jpg" alt="Vue aérienne de la plage des Sabias"
+                        onclick="openModal();currentSlide(4)" class="hover-shadow">
+                </div>
+            </div>
+
+            <!-- The Modal/Lightbox -->
+            <div id="myModal" class="modal">
+                <span class="close cursor" onclick="closeModal()">&times;</span>
+                <div class="modal-content">
+
+                    <div class="mySlides">
+                        <div class="numbertext">1 / 4</div>
+                        <img src="./ressources/gallery/pointe-but-aerodrome-phare.jpg"
+                            alt="Vue aérienne de l'aérodrome vers la pointe du but" style="width:100%">
+                    </div>
+
+                    <div class="mySlides">
+                        <div class="numbertext">2 / 4</div>
+                        <img src="./ressources/gallery/2.jpg" alt="Vue aérienne de ???" style="width:100%">
+                    </div>
+
+                    <div class="mySlides">
+                        <div class="numbertext">3 / 4</div>
+                        <img src="./ressources/gallery/vieux-chateau.jpg" alt="Vue aérienne du Vieux château"
+                            style="width:100%">
+                    </div>
+
+                    <div class="mySlides">
+                        <div class="numbertext">4 / 4</div>
+                        <img src="./ressources/gallery/plage-sabia-helico.jpg" alt="Vue aérienne de la plage des Sabias"
+                            style="width:100%">
+                    </div>
+
+                    <!-- Next/previous controls -->
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+                    <!-- Caption text -->
+                    <div class="caption-container">
+                        <p id="caption"></p>
+                    </div>
+
+                    <!-- Thumbnail image controls -->
+                    <div class="column">
+                        <img class="demo" src="img1.jpg" onclick="currentSlide(1)" alt="Nature">
+                    </div>
+
+                    <div class="column">
+                        <img class="demo" src="img2.jpg" onclick="currentSlide(2)" alt="Snow">
+                    </div>
+
+                    <div class="column">
+                        <img class="demo" src="img3.jpg" onclick="currentSlide(3)" alt="Mountains">
+                    </div>
+
+                    <div class="column">
+                        <img class="demo" src="img4.jpg" onclick="currentSlide(4)" alt="Lights">
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="column">
-            <img src="./ressources/gallery/plage-sabia-helico.jpg" onclick="openModal();currentSlide(2)" class="hover-shadow">
-        </div>
-        <div class="column">
-            <img src="./ressources/gallery/vieux-chateau.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow">
-        </div>
-        <div class="column">
-            <img src="./ressources/gallery/2.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow">
-        </div>
-    </div>
-
-    <!-- The Modal/Lightbox -->
-    <div id="myModal" class="modal">
-        <span class="close cursor" onclick="closeModal()">&times;</span>
-        <div class="modal-content">
-
-            <div class="mySlides">
-                <div class="numbertext">1 / 4</div>
-                <img src="./ressources/gallery/pointe-but-aerodrome-phare.jpg" style="width:100%">
-            </div>
-
-            <div class="mySlides">
-                <div class="numbertext">2 / 4</div>
-                <img src="./ressources/gallery/plage-sabia-helico.jpg" style="width:100%">
-            </div>
-
-            <div class="mySlides">
-                <div class="numbertext">3 / 4</div>
-                <img src="./ressources/gallery/vieux-chateau.jpg" style="width:100%">
-            </div>
-
-            <div class="mySlides">
-                <div class="numbertext">4 / 4</div>
-                <img src="./ressources/gallery/2.jpg" style="width:100%">
-            </div>
-
-            <!-- Next/previous controls -->
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-            <!-- Caption text -->
-            <div class="caption-container">
-                <p id="caption"></p>
-            </div>
-
-            <!-- Thumbnail image controls -->
-            <div class="column">
-                <img class="demo" src="img1.jpg" onclick="currentSlide(1)" alt="Nature">
-            </div>
-
-            <div class="column">
-                <img class="demo" src="img2.jpg" onclick="currentSlide(2)" alt="Snow">
-            </div>
-
-            <div class="column">
-                <img class="demo" src="img3.jpg" onclick="currentSlide(3)" alt="Mountains">
-            </div>
-
-            <div class="column">
-                <img class="demo" src="img4.jpg" onclick="currentSlide(4)" alt="Lights">
-            </div>
-        </div>
-    </div>
-
+    </section>
 
     <footer>
         <p>

@@ -35,7 +35,7 @@ h1 {
     padding-top: 20px;
 }
 
-h2 {
+h2, h3 {
     font-family: 'Montserrat', arial, sans-serif;
     font-size: 1.2em;
 }
@@ -44,7 +44,7 @@ p,
 a {
     font-family: 'Montserrat', arial, sans-serif;
     color: #333333;
-    font-size: 1em;
+    font-size: 0.9em;
 }
 
 
@@ -56,7 +56,6 @@ nav {
     position: absolute;
     left: -18em;
     z-index: 1;
-    position: fixed;
 }
 
 nav ul li {
@@ -352,7 +351,7 @@ footer {
     align-items: center;
     justify-content: center;
     color: white;
-    margin-top: 50px;
+ 
 }
 
 footer p,
