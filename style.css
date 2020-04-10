@@ -287,6 +287,10 @@ nav img {
                     font-size: 2em;
                 }
 
+                h2, h3 {
+                    font-size: 1em ;
+                }
+
                 p {
                     font-size: 0.8em;
                 }
@@ -318,6 +322,7 @@ nav img {
                     position: relative;
                     right: 0;
                     bottom: -100px;
+                    background: none;
                 }
 
                 .reseaux img {
@@ -328,7 +333,7 @@ nav img {
                     margin-right: 25%
                 }
 
-                .button {
+                .button-home {
                     display: none;
                 }
 
