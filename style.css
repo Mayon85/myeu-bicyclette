@@ -369,7 +369,8 @@ nav img {
                 }
 
                 .cadre {
-                    margin-right: 25%
+                    margin-right: 25%;
+                    margin-bottom: 15%;
                 }
 
                 .button-home {
@@ -380,6 +381,11 @@ nav img {
                     position: relative;
                     top: -80px;
                     right: 0;
+                }
+
+                .circle-scroll {
+                    position: absolute;
+                    bottom: 30px;
                 }
             }
 

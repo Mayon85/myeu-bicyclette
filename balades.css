@@ -19,7 +19,7 @@ Date de création : 06/04/2020
     flex-direction: column;
     position: relative;
 
-    background: url(./ressources/hero-balade.jpg);
+    background: url(./ressources/hero-balade.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -83,7 +83,7 @@ Date de création : 06/04/2020
 
 .btn-balade {
     background-color: #468594;
-    width: 50%;
+    width: auto;
     padding: 10px;
     border: none;
     text-transform: uppercase;

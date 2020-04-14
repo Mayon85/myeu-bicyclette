@@ -78,7 +78,13 @@ Date de création : 06/04/2020
                        "1fr 1fr 1fr" 250px
                        "1fr 1fr 1fr" 250px
                        "1fr 1fr 1fr" 250px
+                       "1fr 1fr 1fr" 250px
+                       "1fr 1fr 1fr" 250px
                        "1fr 1fr 1fr" 250px; 
+    }
+
+    .container-gallery .box.q {
+        grid-column: span 1;
     }
 }
 
@@ -94,11 +100,18 @@ Date de création : 06/04/2020
                        "1fr 1fr" 200px
                        "1fr 1fr" 200px
                        "1fr 1fr" 200px
+                       "1fr 1fr" 200px
+                       "1fr 1fr" 200px
+                       "1fr 1fr" 200px
                        "1fr 1fr" 200px; 
     }
 
     .container-gallery .box.l {
         grid-column: span 1;
+    }
+
+    .container-gallery .box.q {
+        grid-column: span 2;
     }
 }
 
