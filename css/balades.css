@@ -34,18 +34,21 @@ Date de création : 06/04/2020
 
 .container-balades {
     position: relative;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap: wrap;
-    width: 80%;
+    width: 100%;
     margin: auto;
     padding: 50px 0;
 }
 
+.container-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
 .container-balades .box {
     position: relative;
-    width: 500px;
+    width: 400px;
     height: 280px;
     overflow: hidden;
     transition: 0.5s;
@@ -83,7 +86,7 @@ Date de création : 06/04/2020
 
 .btn-balade {
     background-color: #468594;
-    width: 50%;
+    width: 60%;
     padding: 10px;
     border: none;
     text-transform: uppercase;
@@ -122,7 +125,7 @@ Date de création : 06/04/2020
     background-repeat: no-repeat;
     background-size: cover;
     box-shadow: 0px 0px 28px -4px rgba(0, 0, 0, 0.75);
-    margin: 15% auto;
+    margin: 10% auto;
     padding: 40px;
     width: 80%;
     display: flex;
@@ -131,17 +134,18 @@ Date de création : 06/04/2020
 }
 
 .modal-content {
-  animation-name: zoom;
-  animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
 }
 
 @keyframes zoom {
-  from {
-    transform: scale(0)
-  }
-  to {
-    transform: scale(1)
-  }
+    from {
+        transform: scale(0)
+    }
+
+    to {
+        transform: scale(1)
+    }
 }
 
 .modal-content h2 {
@@ -185,17 +189,144 @@ Date de création : 06/04/2020
     cursor: pointer;
 }
 
-/******************* RESPONSIVE ***************/
+/********* AVIS DE FACEBOOK ***********************************/
+#testimonials {
+    background: rgba(70, 132, 148, 0.3);
+    padding: 40px 15%;
+    margin-top: 50px;
+}
+
+.testimonials {
+    text-align: center;
+}
+
+.testimonials h3 {
+    text-transform: uppercase;
+}
+.testimonials p {
+    margin: 10px 0 20px 0;
+}
+
+.testimonials a {
+    font-weight: 700;
+    font-size: 14px;
+    color: #468594;
+}
+
+ /* Slideshow container */
+ .slideshow-container {
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.178);
+  }
+  
+  /* Slides */
+  .mySlides {
+    display: none;
+    padding: 80px;
+    text-align: center;
+  }
+  
+  /* Next & previous buttons */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -30px;
+    padding: 16px;
+    color: #888;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+  .next {
+    position: absolute;
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  .prev:hover, .next:hover {
+    background-color:rgba(70, 132, 148, 0.3);
+    color: white;
+  }
+  
+  /* The dot/bullet/indicator container */
+  .dot-container {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #4684947c;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .active, .dot:hover {
+    background-color: #468594;
+  }
+ 
+  q {
+      font-weight: 300;
+      font-style: italic;
+    }
+  
+  .author {
+      padding: 10px;
+      color: #333333;
+    } 
+
+
+
+/********* RESPONSIVE ***********************************/
 
 @media screen and (max-width:992px) {
-    .modal-content img {width: 300px;}
+    .modal-content img {
+        width: 300px;
+    }
+
+    .container-balades .box {
+        width: 280px;
+        height: 196px;
+    }
+
+    .btn-balade {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width:667px) {
+    .container-balades .box {
+        width: 200px;
+        height: 140px;
+    }
+
+    .btn-balade {
+        width: 110%;
+        font-size: 10px;
+    }
 }
 
 @media screen and (max-width:768px) {
-    .modal-content {flex-direction: column;}
-    .modal-content img {padding-top: 15px; width: 100%;}
+    .modal-content {
+        flex-direction: column;
+    }
+
+    .modal-content img {
+        padding-top: 15px;
+        width: 100%;
+    }
 }
 
 @media screen and (max-width: 576px) {
-    .btn-balade { width: 100%;}
+    .btn-balade {
+        width: 100%;
+    }
 }

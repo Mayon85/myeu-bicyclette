@@ -43,7 +43,7 @@ h2, h3 {
 }
 
 p,
-a {
+a, q {
     font-family: 'Montserrat', arial, sans-serif;
     color: #333333;
     font-size: 0.9em;
