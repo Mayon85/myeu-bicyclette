@@ -153,10 +153,6 @@ nav img {
         font-weight: 600;
         margin-left: 1em;
     }
-
-    #menu-mobile img {
-        display: none;
-    }
 }
 
 /*** ICON SCROLL *************************/
@@ -293,17 +289,21 @@ nav img {
     padding: 10px;
     width: 30%;
     text-align: center;
-    animation: pulse 1.5s;
-    animation-delay: 3s;
-}
-
-.button a {
     text-transform: uppercase;
     font-size: 1em;
     color: white;
     font-weight: 600;
     text-decoration: none;
+    animation: pulse 1.5s;
+    animation-delay: 3s;
+    transition: 1s;
 }
+
+.button:hover {
+    background-color: rgb(228, 228, 228);
+    color: #468594;
+}
+
 
             /*** RESPONSIVE *************************************/
             @media screen and (max-width: 992px) {
@@ -334,7 +334,7 @@ nav img {
                     font-size: 1em ;
                 }
 
-                p {
+                p,a,q {
                     font-size: 0.8em;
                 }
 
@@ -357,7 +357,7 @@ nav img {
                     font-size: 1em;
                 }
 
-                p {
+                p,a,q {
                     font-size: 0.7em;
                 }
 

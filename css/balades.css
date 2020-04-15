@@ -194,6 +194,8 @@ Date de création : 06/04/2020
     background: rgba(70, 132, 148, 0.3);
     padding: 40px 15%;
     margin-top: 50px;
+    display: flex;
+    flex-direction: column;
 }
 
 .testimonials {
@@ -203,6 +205,7 @@ Date de création : 06/04/2020
 .testimonials h3 {
     text-transform: uppercase;
 }
+
 .testimonials p {
     margin: 10px 0 20px 0;
 }
@@ -283,7 +286,9 @@ Date de création : 06/04/2020
       color: #333333;
     } 
 
-
+    .button-togallery {
+        width: auto;
+    }
 
 /********* RESPONSIVE ***********************************/
 
@@ -302,6 +307,17 @@ Date de création : 06/04/2020
     }
 }
 
+@media screen and (max-width:768px) {
+    .modal-content {
+        flex-direction: column;
+    }
+
+    .modal-content img {
+        padding-top: 15px;
+        width: 100%;
+    }
+}
+
 @media screen and (max-width:667px) {
     .container-balades .box {
         width: 200px;
@@ -314,19 +330,15 @@ Date de création : 06/04/2020
     }
 }
 
-@media screen and (max-width:768px) {
-    .modal-content {
-        flex-direction: column;
-    }
-
-    .modal-content img {
-        padding-top: 15px;
-        width: 100%;
-    }
-}
-
 @media screen and (max-width: 576px) {
     .btn-balade {
         width: 100%;
     }
+}
+
+@media screen and (max-width: 488px) {
+    .mySlides {
+        padding: 50px;
+      }
+
 }

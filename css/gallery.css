@@ -28,6 +28,10 @@ Date de création : 06/04/2020
     overflow: hidden;
 }
 
+.galerie-photos .logo {
+  top: -160px;
+}
+
 .galerie-photos .content {
     padding: 0;
 }
@@ -35,6 +39,11 @@ Date de création : 06/04/2020
 .galerie-photos h1 {
     padding: 8px 0 8px 0;
 }
+
+ #gallery {
+   display: flex;
+   flex-direction: column;
+ }
 
 .container-gallery {
     width: 80%;
@@ -89,8 +98,7 @@ Date de création : 06/04/2020
                        "1fr 1fr 1fr" 250px
                        "1fr 1fr 1fr" 250px
                        "1fr 1fr 1fr" 250px
-                       "1fr 1fr 1fr" 250px
-                       "1fr 1fr 1fr" 250px
+                       "1fr 1fr 1fr" 250px                
                        "1fr 1fr 1fr" 250px
                        "1fr 1fr 1fr" 250px
                        "1fr 1fr 1fr" 250px; 
@@ -114,8 +122,6 @@ Date de création : 06/04/2020
                        "1fr 1fr" 200px
                        "1fr 1fr" 200px
                        "1fr 1fr" 200px
-                       "1fr 1fr" 200px
-                       "1fr 1fr" 200px
                        "1fr 1fr" 200px; 
     }
 
@@ -125,6 +131,10 @@ Date de création : 06/04/2020
 
     .container-gallery .box.q {
         grid-column: span 2;
+    }
+
+    .btn-balades {
+      width: 55%;
     }
 }
 

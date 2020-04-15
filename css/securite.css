@@ -97,6 +97,10 @@ Date de création : 06/04/2020
     #page-securite img {
         height: 80px;
     }
+
+    .button-secu {
+        width: 50%;
+    }
 }
 
 @media screen and (max-width:576px) {
