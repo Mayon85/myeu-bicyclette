@@ -1,39 +1,26 @@
 
 /*** PAGE BALADES MODALS INCONTOURNABLE ********************************/
 
-// Get the modal
-var modal = document.getElementById("Modal-incontournable");
-
-// Get the button that opens the modal
-var btn = document.getElementById("Btn-modal");
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks on the button, open the modal
-btn.onclick = function() {
-  modal.style.display = "block";
+let btn = document.getElementsByClassName("btn-balade");
+let modal = document.getElementsByClassName("modal")
+for(var i=0; i < btn.length; i++) {
+  btn[i].addEventListener("click", (e)=> {
+    const modal = document.getElementById(e.target.dataset.modal)
+    modal.style.display = "block";
+  })
 }
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  modal.style.display = "none";
+let span = document.getElementsByClassName("close");
+for(var j=0; j < span.length; j++) {
+  span[j].addEventListener("click", (e)=> {
+    let modal = e.target.parentNode.parentNode
+    modal.style.display = 'none'
+  })
 }
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-} 
-
-// Essai pour faire une boucle
-
-for (var i = 0; i < modal.length; i++) {
-    var modal = modal[i];
-
-    btn.onclick = function(evt) {
-      console.log(evt);
-      modal.style.display = "block";
+for(var k=0; k< modal.length; k++){
+  modal[k].addEventListener("click", (e) => {
+    console.log(e.target.classList)
+    if(e.target.classList.contains('modal')){
+      e.target.style.display = 'none'
     }
-  }
+  })
+}

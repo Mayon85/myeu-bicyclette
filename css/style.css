@@ -89,12 +89,16 @@ nav ul li a {
     text-transform: uppercase;
     font-weight: 600;
     padding-left: 8em;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
 }
 
 nav img {
     height: 70px;
     margin: 1em;
-    order: 2;
+    margin-left: auto;
 }
 
 #menu-mobile {

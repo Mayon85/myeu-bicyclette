@@ -12,12 +12,19 @@ Date de création : 06/04/2020
 /*** GALERIE PHOTOS ********************************************/
 
 .galerie-photos {
-    height: 80vh;
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
     flex-direction: column;
+    
+    background: url(../ressources/heros/hero-gallery.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+    background-attachment: fixed;
+
     overflow: hidden;
 }
 
@@ -32,6 +39,7 @@ Date de création : 06/04/2020
 .container-gallery {
     width: 80%;
     margin: auto;
+    margin-top: 50px;
     display: grid;
     grid-auto-flow: dense;
     grid-template: "1fr 1fr 1fr 1fr 1fr" 33.33vh
@@ -40,6 +48,7 @@ Date de création : 06/04/2020
                    "1fr 1fr 1fr 1fr 1fr" 33.33vh
                    "1fr 1fr 1fr 1fr 1fr" 33.33vh;
     grid-gap: 5px;
+    
 }
 
 .container-gallery .box {
@@ -166,9 +175,11 @@ Date de création : 06/04/2020
     width: 80%;
     max-width: 700px;
     text-align: center;
-    color: #ccc;
+    color: white;
     padding: 10px 0;
     height: 150px;
+    font-family: 'Montserrat', arial, sans-serif;
+    font-size: 0.8em;
   }
   
   .modal-content,

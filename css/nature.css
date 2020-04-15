@@ -19,11 +19,109 @@ Date de création : 06/04/2020
     flex-direction: column;
     position: relative;
 
-    background: url(./ressources/nature.jpg);
+    background: url(../ressources/heros/hero-nature.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     
     overflow: hidden;
+}
+
+.charte {
+    width: 70%;
+    margin: auto;
+    margin-top: 100px;
+    padding: 20px 20px 0 20px;
+    background-color: #bed1d6bb;
+    position: relative;
+    box-shadow: 0px -5px 30px -5px rgba(0,0,0,0.38);
+}
+
+.charte h2 {
+    font-family: 'Rochester', cursive;
+    font-size: 50px;
+    font-weight: 400;
+    position: relative;
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+}
+
+.charte h2:after {
+    content: '';
+    background: #468594;
+    height: 6px;
+    width: 150px; 
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.charte ul {
+    list-style: none;
+    width: 90%;
+    margin: auto;
+    font-size: 15px;
+    font-family:'Montserrat', arial, sans-serif;
+
+}
+
+.charte ul li {
+    padding: 20px;
+    z-index: 1;
+}
+
+.charte ul li i {
+    padding-right: 10px;
+    color: #468594;
+}
+
+.pied-page {
+    margin: 80px 0 0 50px;
+    padding-bottom: 80px;
+}
+
+.pied-page p {
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 2px;
+    font-size: 25px;
+}
+
+.pied-page img {
+    height: 240px;
+    width: auto;
+    opacity: 0.7;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 0;
+}
+/****** REPONSIVE *************************************/
+
+@media screen and (max-width: 888px) {
+    .pied-page {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+        align-items: center;
+    }
+
+    .pied-page img {
+        position: relative;
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .charte h2 {font-size: 35px;}
+    .charte ul {font-size:13px}
+}
+
+@media screen and (max-width:576px) {
+    .charte h2 {font-size: 30px;}
 }

@@ -30,12 +30,12 @@ Date de création : 06/04/2020
 
 #page-balades {
     display: flex;
-    background-color: #f2f0f2;
 }
 
 .container-balades {
     position: relative;
     display: flex;
+    flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
     width: 80%;
@@ -45,12 +45,13 @@ Date de création : 06/04/2020
 
 .container-balades .box {
     position: relative;
-    width: 560px;
+    width: 500px;
     height: 280px;
     overflow: hidden;
     transition: 0.5s;
     margin: 5px;
     cursor: pointer;
+    margin: 10px;
 }
 
 .container-balades .box:hover {
@@ -73,7 +74,6 @@ Date de création : 06/04/2020
     left: 0;
     height: 100%;
     width: 100%;
-    z-index: 2;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -83,7 +83,7 @@ Date de création : 06/04/2020
 
 .btn-balade {
     background-color: #468594;
-    width: auto;
+    width: 50%;
     padding: 10px;
     border: none;
     text-transform: uppercase;
@@ -113,6 +113,7 @@ Date de création : 06/04/2020
     overflow: auto;
     background-color: rgb(0, 0, 0);
     background-color: rgba(0, 0, 0, 0.4);
+    transition: 1s;
 }
 
 .modal-content {
@@ -127,6 +128,20 @@ Date de création : 06/04/2020
     display: flex;
     align-items: center;
     position: relative;
+}
+
+.modal-content {
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+  from {
+    transform: scale(0)
+  }
+  to {
+    transform: scale(1)
+  }
 }
 
 .modal-content h2 {
@@ -179,4 +194,8 @@ Date de création : 06/04/2020
 @media screen and (max-width:768px) {
     .modal-content {flex-direction: column;}
     .modal-content img {padding-top: 15px; width: 100%;}
+}
+
+@media screen and (max-width: 576px) {
+    .btn-balade { width: 100%;}
 }
