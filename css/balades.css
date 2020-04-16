@@ -11,7 +11,7 @@ Date de création : 06/04/2020
 
 /*** BALADES **********************************************/
 
-.balades {
+#balades {
     height: 100vh;
     display: flex;
     align-items: center;
@@ -53,7 +53,6 @@ Date de création : 06/04/2020
     overflow: hidden;
     transition: 0.5s;
     margin: 5px;
-    cursor: pointer;
     margin: 10px;
 }
 
@@ -103,6 +102,9 @@ Date de création : 06/04/2020
     transform: scale(1.05);
 }
 
+.container-balades .box:hover .btn-balade {
+    animation: pulse 1.5s;
+}
 
 /*********** The Modal **********************/
 .modal {

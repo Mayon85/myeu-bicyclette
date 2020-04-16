@@ -83,27 +83,26 @@ Date de création : 06/04/2020
     padding-bottom: 80px;
 }
 
-.pied-page p {
-    text-transform: uppercase;
-    font-weight: 800;
-    letter-spacing: 2px;
-    font-size: 25px;
+.button-nature {
+    position: relative;
+    z-index: 2;
 }
 
 .pied-page img {
-    height: 240px;
-    width: auto;
-    opacity: 0.7;
+    width: 350px;
+    height: auto;
+    opacity: 0.5;
     position: absolute;
     bottom: 0;
     right: 0;
-    z-index: 0;
+    z-index: 1;
 }
-
 
 /****** REPONSIVE *************************************/
 
-@media screen and (max-width: 888px) {
+@media screen and (max-width: 768px) {
+    .charte h2 {font-size: 35px;}
+    .charte ul {font-size:13px}
     .pied-page {
         display: flex;
         flex-direction: column;
@@ -117,13 +116,13 @@ Date de création : 06/04/2020
         width: 100%;
         height: auto;
     }
-}
 
-@media screen and (max-width: 768px) {
-    .charte h2 {font-size: 35px;}
-    .charte ul {font-size:13px}
+    .button-nature {
+        width: 60%;
+    }
 }
 
 @media screen and (max-width:576px) {
     .charte h2 {font-size: 30px;}
+    .button-nature {font-size: 14px;}
 }

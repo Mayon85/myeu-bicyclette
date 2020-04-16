@@ -156,6 +156,14 @@ nav img {
 }
 
 /*** ICON SCROLL *************************/
+.scroll-background {
+    background: #46849469;
+    position: absolute;
+    bottom: 0;
+    height: 120px;
+    padding: 8px;
+    border-radius: 20px 20px 0 0;
+}
 
 .circle-scroll {
     border: white solid 2px;
@@ -166,8 +174,6 @@ nav img {
     line-height: 50px;
     font-size: 20px;
     overflow: hidden;
-    position: absolute;
-    bottom: 80px;
     animation: fadeIn 2s;
 }
 
@@ -305,93 +311,88 @@ nav img {
 }
 
 
-            /*** RESPONSIVE *************************************/
-            @media screen and (max-width: 992px) {
-                h1 {
-                    font-size: 2.5em;
-                }
+/*** RESPONSIVE *************************************/
+@media screen and (max-width: 992px) {
+    h1 {
+        font-size: 2.5em;
+    }
 
-                .logo img {
-                    height: 80px;
-                }
+    .logo img {
+        height: 80px;
+    }
 
-                .reseaux img {
-                    height: 30px;
-                }
+    .reseaux img {
+        height: 30px;
+    }
 
-                .button-home {
-                    margin-top: 50px;
-                    width: 30%;
-                }
-            }
+    .button-home {
+        margin-top: 50px;
+        width: 30%;
+    }
+}
 
-            @media screen and (max-width: 768px) {
-                h1 {
-                    font-size: 2em;
-                }
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 2em;
+    }
 
-                h2, h3 {
-                    font-size: 1em ;
-                }
+    h2, h3 {
+        font-size: 1em ;
+    }
 
-                p,a,q {
-                    font-size: 0.8em;
-                }
+    p,a,q {
+        font-size: 0.8em;
+    }
 
-                .cadre {
-                    width: 60%;
-                }
+    .cadre {
+        width: 60%;
+    }
 
-                .content {
-                    padding: 0 20px 20px 20px;
-                    ;
-                }
+    .content {
+        padding: 0 20px 20px 20px;
+        ;
+    }
 
-                .button a {
-                    font-size: 0.8em;
-                }
-            }
+    .button a {
+        font-size: 0.8em;
+    }
+}
 
-            @media screen and (max-width: 576px) {
-                h1 {
-                    font-size: 1em;
-                }
+@media screen and (max-width: 576px) {
+    h1 {
+        font-size: 1em;
+    }
 
-                p,a,q {
-                    font-size: 0.7em;
-                }
+    p,a,q {
+        font-size: 0.7em;
+    }
 
-                .reseaux {
-                    position: relative;
-                    right: 0;
-                    bottom: -100px;
-                    background: none;
-                }
+    .reseaux {
+        position: relative;
+        right: 0;
+        bottom: -100px;
+        background: none;
+    }
 
-                .reseaux img {
-                    height: 25px;
-                }
+    .reseaux img {
+        height: 25px;
+    }
 
-                .cadre {
-                    margin-right: 25%;
-                    margin-bottom: 15%;
-                }
+    .cadre {
+        margin-right: 25%;
+        margin-bottom: 15%;
+    }
 
-                .button-home {
-                    display: none;
-                }
+    .button-home {
+        display: none;
+    }
 
-                .logo {
-                    position: relative;
-                    top: -80px;
-                    right: 0;
-                }
-
-                .circle-scroll {
-                    position: absolute;
-                    bottom: 30px;
-                }
-            }
+    .logo {
+        position: relative;
+        top: -50px;
+        right: 0;
+    }
+}
 
 
 /*** FOOTER **********************************************/
@@ -405,12 +406,12 @@ footer {
     align-items: center;
     justify-content: center;
     color: white;
- 
 }
 
 footer p,
 footer a {
     color: white;
+    font-size: 0.9em;
 }
 
 
