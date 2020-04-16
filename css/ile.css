@@ -188,7 +188,9 @@ Date de création : 06/04/2020
   cursor: pointer;
 }
 
-/* The Modal (background) */
+.img {
+  width: 100%;
+}
 .modal {
   display: none;
   position: fixed;
@@ -202,7 +204,6 @@ Date de création : 06/04/2020
   background-color: rgba(0, 0, 0, 0.8);
 }
 
-/* Modal Content */
 .modal-content {
   position: relative;
   background-color: #fefefe;
@@ -212,7 +213,6 @@ Date de création : 06/04/2020
   max-width: 800px;
 }
 
-/* The Close Button */
 .close {
   color: white;
   position: absolute;
@@ -229,12 +229,10 @@ Date de création : 06/04/2020
   cursor: pointer;
 }
 
-/* Hide the slides by default */
 .mySlides {
   display: none;
 }
 
-/* Next & previous buttons */
 .prev,
 .next {
   cursor: pointer;

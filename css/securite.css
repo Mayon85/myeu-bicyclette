@@ -41,9 +41,8 @@ Date de création : 06/04/2020
 
 .secu-left {
     background-color: #bed1d6bb;
-    padding: 20px;
-    padding-left: 80px;
-    margin: 25px 0px 50px 0; 
+    padding: 20px 20px 50px 80px;
+    margin: 25px 0px 100px 0; 
     width: 60%;
     position: relative;
 }
@@ -51,9 +50,8 @@ Date de création : 06/04/2020
 .secu-right {
     text-align: right;
     background-color: #bed1d6bb;
-    padding: 20px;
-    padding-right: 80px;
-    margin: 25px 0 50px 40%;
+    padding: 20px 80px 50px 20px;
+    margin: 25px 0 100px 40%;
     position: relative;
 }
 
