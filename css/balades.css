@@ -28,8 +28,13 @@ Date de création : 06/04/2020
     overflow: hidden;
 }
 
+#balades .content p {
+    margin-bottom: -25px;
+}
+
 #page-balades {
     display: flex;
+    margin: 80px 0;
 }
 
 .container-balades {
@@ -195,7 +200,6 @@ Date de création : 06/04/2020
 #testimonials {
     background: rgba(70, 132, 148, 0.3);
     padding: 40px 15%;
-    margin-top: 50px;
     display: flex;
     flex-direction: column;
 }

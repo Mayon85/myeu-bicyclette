@@ -360,11 +360,7 @@ nav img {
 
 @media screen and (max-width: 576px) {
     h1 {
-        font-size: 1em;
-    }
-
-    p,a,q {
-        font-size: 0.7em;
+        font-size: 1.2em;
     }
 
     .reseaux {
