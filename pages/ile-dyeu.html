@@ -54,6 +54,7 @@
     <!-- CSS ------------------------>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/ile.css">
+    <link rel="stylesheet" href="../aos/aos.css">
 
     <!-- ICONS & FONTS ------------------------>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
@@ -129,7 +130,7 @@
 
         <section class="page-presentation" id="presentation-histoire">
 
-            <div class="histoire">
+            <div class="histoire" data-aos="fade-left" data-aos-duration="800">
 
                 <div class="histoire-text">
                     <h2>L'histoire de l'île vendéenne</h2>
@@ -150,7 +151,7 @@
 
         <section class="page-presentation-reverse">
 
-            <div class="histoire histoire-reverse">
+            <div class="histoire histoire-reverse" data-aos="fade-right" data-aos-duration="800">
 
                 <div class="histoire-text">
                     <h2>La vie des Islais à Yeu</h2>
@@ -172,7 +173,7 @@
 
         <section class="page-presentation">
 
-            <div class="histoire">
+            <div class="histoire" data-aos="fade-left" data-aos-duration="800">
 
                 <div class="histoire-text">
                     <h2>Comment venir à l'Île d'Yeu</h2>
@@ -241,7 +242,8 @@
 
                         <div class="mySlides">
                             <div class="numbertext">3 / 4</div>
-                            <img src="../ressources/gallery/vieux-chateau.jpg" alt="Vue aérienne du Vieux château" class="img">
+                            <img src="../ressources/gallery/vieux-chateau.jpg" alt="Vue aérienne du Vieux château"
+                                class="img">
                         </div>
 
                         <div class="mySlides">
@@ -275,6 +277,9 @@
 
     <!-- JAVASCRIPT ------------------------>
     <script src="../js/ile.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <script src="../aos/aos.js"></script>
+    <script>AOS.init();</script>
 
 </body>
 

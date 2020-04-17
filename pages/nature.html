@@ -54,6 +54,7 @@
     <!-- CSS ------------------------>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/nature.css">
+    <link rel="stylesheet" href="../aos/aos.css">
 
     <!-- ICONS & FONTS ------------------------>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
@@ -128,7 +129,8 @@
 
     <section id="page-nature">
 
-        <div class="charte">
+        <div class="charte" data-aos="fade-up"
+        data-aos-duration="2000">
             <h2>Charte du Gentil Touriste</h2>
             <ul>
                 <li><i class="fas fa-leaf"></i> Je Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel earum
@@ -165,6 +167,9 @@
         </p>
     </footer>
 
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <script src="../aos/aos.js"></script>
+    <script> AOS.init(); </script>
 
 </body>
 
