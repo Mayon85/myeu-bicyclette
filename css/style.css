@@ -421,10 +421,10 @@ footer a {
     position: relative;
     flex-direction: column;
     
-    background: url(../ressources/heros/hero-gallery.png);
+    background: url(../ressources/heros/hero-mentions.png);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center top;
+    background-position: center;
     background-attachment: fixed;
 
     overflow: hidden;
