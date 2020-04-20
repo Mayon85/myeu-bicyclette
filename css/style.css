@@ -11,6 +11,7 @@ CSS GLOBAL (suceptible d'être sur toutes les pages)
 - Icon scroll
 - Header
 - Footer
+- Mentions Légales
 - Animation 
 
 
@@ -408,6 +409,72 @@ footer p,
 footer a {
     color: white;
     font-size: 0.9em;
+}
+
+/*** MENTIONS LEGALES *************************************/
+
+.mentions-legales {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    flex-direction: column;
+    
+    background: url(../ressources/heros/hero-gallery.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+    background-attachment: fixed;
+
+    overflow: hidden;
+}
+
+.mentions-legales .content {
+    padding: 0;
+}
+
+.mentions-legales h1 {
+    padding: 8px 0 8px 0;
+}
+
+#mentions {
+    width: 70%;
+    margin: 80px auto;
+    display: flex;
+    flex-direction: column;
+}
+
+#mentions h2 {
+    margin: 30px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+#mentions h2:after {
+    content: '';
+    background: #468594;
+    height: 6px;
+    width: 50px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+
+#mentions ul {
+    list-style: none;
+    font-weight: 600;
+}
+
+#mentions li {
+    font-family: 'Montserrat', arial, sans-serif;
+    color: #333333;
+    font-size: 0.9em;
+    margin: 10px 0;
+}
+
+@media screen and (max-width:576px) {
+    .btn-mentions {width: auto;}
 }
 
 
