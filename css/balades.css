@@ -13,10 +13,15 @@ Date de création : 06/04/2020
 
 #balades {
     height: 100vh;
+    display: -webkit-box;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+    -webkit-box-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
     position: relative;
 
     background: url(/ressources/heros/hero-balade.png);
@@ -33,6 +38,7 @@ Date de création : 06/04/2020
 }
 
 #page-balades {
+    display: -webkit-box;
     display: flex;
     margin: 80px 0;
 }
@@ -45,9 +51,13 @@ Date de création : 06/04/2020
 }
 
 .container-group {
+    display: -webkit-box;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+            flex-direction: row;
+    -webkit-box-pack: center;
+            justify-content: center;
     flex-wrap: wrap;
 }
 
@@ -56,6 +66,7 @@ Date de création : 06/04/2020
     width: 400px;
     height: 280px;
     overflow: hidden;
+    -webkit-transition: 0.5s;
     transition: 0.5s;
     margin: 5px;
     margin: 10px;
@@ -72,7 +83,8 @@ Date de création : 06/04/2020
     left: 0;
     height: 100%;
     width: 100%;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
 }
 
 .box-content {
@@ -81,10 +93,15 @@ Date de création : 06/04/2020
     left: 0;
     height: 100%;
     width: 100%;
+    display: -webkit-box;
     display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    flex-direction: column;
+    -webkit-box-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
     padding: 40px;
 }
 
@@ -97,6 +114,7 @@ Date de création : 06/04/2020
     letter-spacing: 1px;
     font-weight: 600;
     color: white;
+    -webkit-transition: 0.6s;
     transition: 0.6s;
     cursor: pointer;
 }
@@ -104,11 +122,13 @@ Date de création : 06/04/2020
 .btn-balade:hover {
     background-color: white;
     color: #468594;
-    transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
 }
 
 .container-balades .box:hover .btn-balade {
-    animation: pulse 1.5s;
+    -webkit-animation: pulse 1.5s;
+            animation: pulse 1.5s;
 }
 
 /*********** The Modal **********************/
@@ -123,6 +143,7 @@ Date de création : 06/04/2020
     overflow: auto;
     background-color: rgb(0, 0, 0);
     background-color: rgba(0, 0, 0, 0.4);
+    -webkit-transition: 1s;
     transition: 1s;
 }
 
@@ -135,23 +156,41 @@ Date de création : 06/04/2020
     margin: 10% auto;
     padding: 40px;
     width: 80%;
+    display: -webkit-box;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+            align-items: center;
     position: relative;
 }
 
 .modal-content {
-    animation-name: zoom;
-    animation-duration: 0.6s;
+    -webkit-animation-name: zoom;
+            animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+            animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+    from {
+        -webkit-transform: scale(0);
+                transform: scale(0)
+    }
+
+    to {
+        -webkit-transform: scale(1);
+                transform: scale(1)
+    }
 }
 
 @keyframes zoom {
     from {
-        transform: scale(0)
+        -webkit-transform: scale(0);
+                transform: scale(0)
     }
 
     to {
-        transform: scale(1)
+        -webkit-transform: scale(1);
+                transform: scale(1)
     }
 }
 
@@ -200,8 +239,11 @@ Date de création : 06/04/2020
 #testimonials {
     background: rgba(70, 132, 148, 0.3);
     padding: 40px 15%;
+    display: -webkit-box;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
 }
 
 .testimonials {
@@ -247,7 +289,10 @@ Date de création : 06/04/2020
     font-weight: bold;
     font-size: 20px;
     border-radius: 0 3px 3px 0;
-    user-select: none;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
   }
   
   .next {
@@ -275,6 +320,7 @@ Date de création : 06/04/2020
     background-color: #4684947c;
     border-radius: 50%;
     display: inline-block;
+    -webkit-transition: background-color 0.6s ease;
     transition: background-color 0.6s ease;
   }
   
@@ -315,7 +361,9 @@ Date de création : 06/04/2020
 
 @media screen and (max-width:768px) {
     .modal-content {
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+                flex-direction: column;
     }
 
     .modal-content img {

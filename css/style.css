@@ -69,17 +69,27 @@ nav ul li {
     box-shadow: 0px 0px 5px black;
     height: 4.7em;
     margin: 1em;
+    display: -webkit-box;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    -webkit-box-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+            align-items: center;
     cursor: pointer;
 
+    -webkit-transition: background-color 0.5s, -webkit-transform 0.5s;
+
+    transition: background-color 0.5s, -webkit-transform 0.5s;
+
     transition: transform 0.5s, background-color 0.5s;
+
+    transition: transform 0.5s, background-color 0.5s, -webkit-transform 0.5s;
 
 }
 
 nav ul li:hover {
-    transform: translateX(10em);
+    -webkit-transform: translateX(10em);
+            transform: translateX(10em);
     background-color: #468594;
 }
 
@@ -90,9 +100,12 @@ nav ul li a {
     text-transform: uppercase;
     font-weight: 600;
     padding-left: 8em;
+    display: -webkit-box;
     display: flex;
-    align-items: center;
-    justify-content: flex-end;
+    -webkit-box-align: center;
+            align-items: center;
+    -webkit-box-pack: end;
+            justify-content: flex-end;
     width: 100%;
 }
 
@@ -133,9 +146,12 @@ nav img {
         border-radius: 40px;
         box-shadow: 0px 0px 5px black;
         margin: 1em;
+        display: -webkit-box;
         display: flex;
-        justify-content: space-between;
-        align-items: center;
+        -webkit-box-pack: justify;
+                justify-content: space-between;
+        -webkit-box-align: center;
+                align-items: center;
         cursor: pointer;
 
         height: 2.5em;
@@ -143,7 +159,8 @@ nav img {
     }
 
     #menu-mobile ul li:hover {
-        transform: translateX(0);
+        -webkit-transform: translateX(0);
+                transform: translateX(0);
     }
 
     #menu-mobile ul li a {
@@ -175,25 +192,48 @@ nav img {
     line-height: 50px;
     font-size: 20px;
     overflow: hidden;
-    animation: fadeIn 2s;
+    -webkit-animation: fadeIn 2s;
+            animation: fadeIn 2s;
 }
 
 .circle-scroll i {
-    animation: scroll 2s infinite linear;
+    -webkit-animation: scroll 2s infinite linear;
+            animation: scroll 2s infinite linear;
     color: white;
+}
+
+@-webkit-keyframes scroll {
+    0% {
+        -webkit-transform: translateY(-10px);
+                transform: translateY(-10px);
+        opacity:0
+    }
+    50% {
+        -webkit-transform: translateY(0px);
+                transform: translateY(0px);
+        opacity:1
+    }
+    100% {
+        -webkit-transform: translateY(10px);
+                transform: translateY(10px);
+        opacity: 0;
+    }
 }
 
 @keyframes scroll {
     0% {
-        transform: translateY(-10px);
+        -webkit-transform: translateY(-10px);
+                transform: translateY(-10px);
         opacity:0
     }
     50% {
-        transform: translateY(0px);
+        -webkit-transform: translateY(0px);
+                transform: translateY(0px);
         opacity:1
     }
     100% {
-        transform: translateY(10px);
+        -webkit-transform: translateY(10px);
+                transform: translateY(10px);
         opacity: 0;
     }
 }
@@ -209,18 +249,25 @@ nav img {
     background-size: cover;
     background-position: center;
 
+    display: -webkit-box;
+
     display: flex;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+            justify-content: center;
     position: relative;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
     overflow: hidden;
 }
 
 .cadre {
     position: relative;
     width: 50%;
-    animation: fadeIn 2s;
+    -webkit-animation: fadeIn 2s;
+            animation: fadeIn 2s;
 }
 
 .content:before {
@@ -231,7 +278,8 @@ nav img {
     border-width: 2px 0 2px 2px;
     position: absolute;
     left: 0;
-    animation: slideInLeft 2s;
+    -webkit-animation: slideInLeft 2s;
+            animation: slideInLeft 2s;
 }
 
 .content:after {
@@ -242,15 +290,21 @@ nav img {
     border-width: 2px 2px 2px 0;
     position: absolute;
     right: 0;
-    animation: slideInRight 2s;
+    -webkit-animation: slideInRight 2s;
+            animation: slideInRight 2s;
 }
 
 
 .content {
+    display: -webkit-box;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
+    -webkit-box-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+            justify-content: space-between;
     padding: 0 40px 40px 40px;
 
 }
@@ -281,6 +335,7 @@ nav img {
     right: 0;
     bottom: 0;
     background: rgb(255,255,255);
+    background: -webkit-gradient(linear, right top, left top, color-stop(20%, rgba(255,255,255,1)), to(rgba(255,255,255,0)));
     background: linear-gradient(270deg, rgba(255,255,255,1) 20%, rgba(255,255,255,0) 100%); 
 }
 
@@ -301,8 +356,11 @@ nav img {
     color: white;
     font-weight: 600;
     text-decoration: none;
-    animation: pulse 1.5s;
-    animation-delay: 3s;
+    -webkit-animation: pulse 1.5s;
+            animation: pulse 1.5s;
+    -webkit-animation-delay: 3s;
+            animation-delay: 3s;
+    -webkit-transition: 1s;
     transition: 1s;
 }
 
@@ -399,9 +457,12 @@ footer {
     background-color: #333333;
     text-align: center;
     font-size: 0.8em;
+    display: -webkit-box;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+            justify-content: center;
     color: white;
 }
 
@@ -415,11 +476,16 @@ footer a {
 
 .mentions-legales {
     height: 100vh;
+    display: -webkit-box;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+            justify-content: center;
     position: relative;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
     
     background: url(../ressources/heros/hero-mentions.png);
     background-repeat: no-repeat;
@@ -441,8 +507,11 @@ footer a {
 #mentions {
     width: 70%;
     margin: 80px auto;
+    display: -webkit-box;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
 }
 
 #mentions h2 {
@@ -565,6 +634,23 @@ footer a {
 .slideInRight {
     -webkit-animation-name: slideInRight;
     animation-name: slideInRight;
+}
+
+@-webkit-keyframes pulse {
+    from {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+
+    50% {
+        -webkit-transform: scale3d(1.1, 1.1, 1.1);
+        transform: scale3d(1.1, 1.1, 1.1);
+    }
+
+    to {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
 }
 
 @keyframes pulse {

@@ -13,10 +13,15 @@ Date de création : 06/04/2020
 
 .nature {
     height: 100vh;
+    display: -webkit-box;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+    -webkit-box-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
     position: relative;
 
     background: url(../ressources/heros/hero-nature.png);
@@ -56,7 +61,8 @@ Date de création : 06/04/2020
     position: absolute;
     bottom: 0;
     left: 50%;
-    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+            transform: translate(-50%,-50%);
 }
 
 .charte ul {
@@ -104,11 +110,15 @@ Date de création : 06/04/2020
     .charte h2 {font-size: 35px;}
     .charte ul {font-size:13px}
     .pied-page {
+        display: -webkit-box;
         display: flex;
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+                flex-direction: column;
         margin: 0;
         padding: 0;
-        align-items: center;
+        -webkit-box-align: center;
+                align-items: center;
     }
 
     .pied-page img {

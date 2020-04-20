@@ -16,10 +16,15 @@ Date de création : 06/04/2020
 
 #presentation {
   height: 100vh;
+  display: -webkit-box;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
   position: relative;
   background: url(/ressources/heros/hero-ile.png);
   background-repeat: no-repeat;
@@ -32,23 +37,32 @@ Date de création : 06/04/2020
 
 .page-presentation {
   position: relative;
+  display: -webkit-box;
   display: flex;
-  flex-direction: column;
-  align-items: flex-end;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  -webkit-box-align: end;
+          align-items: flex-end;
   margin-bottom: 30px;
 }
 
 .histoire {
+  display: -webkit-box;
   display: flex;
   width: 80%;
-  align-items: center;
+  -webkit-box-align: center;
+          align-items: center;
   position: relative;
 }
 
 .histoire-text {
   color: #333333;
+  display: -webkit-box;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
   margin: 50px 0;
   background-color: #bed1d6bb;
   padding-right: 40%;
@@ -95,8 +109,10 @@ Date de création : 06/04/2020
 }
 
 .histoire img {
+  -webkit-transition: 0.3s;
   transition: 0.3s;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   box-shadow: 0px 0px 17px 0px rgba(0, 0, 0, 0.3);
   width: 28%;
   height: auto;
@@ -147,9 +163,13 @@ Date de création : 06/04/2020
 .small-gallery {
   width: 95%;
   margin: auto;
+  display: -webkit-box;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  -webkit-box-align: center;
+          align-items: center;
 }
 
 .small-gallery h3 {
@@ -171,9 +191,12 @@ Date de création : 06/04/2020
 }
 
 .row {
+  display: -webkit-box;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+          justify-content: center;
   flex-wrap: wrap;
 }
 
@@ -244,9 +267,12 @@ Date de création : 06/04/2020
   color: white;
   font-weight: bold;
   font-size: 20px;
+  -webkit-transition: 0.6s ease;
   transition: 0.6s ease;
   border-radius: 0 3px 3px 0;
-  user-select: none;
+  -moz-user-select: none;
+   -ms-user-select: none;
+       user-select: none;
   -webkit-user-select: none;
 }
 
@@ -279,6 +305,7 @@ Date de création : 06/04/2020
 }
 
 img.demo {
+  -webkit-transition: 0.3s;
   transition: 0.3s;
   opacity: 0.6;
 }
@@ -289,6 +316,7 @@ img.demo {
 }
 
 img.hover-shadow {
+  -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 
