@@ -260,8 +260,9 @@ Date de création : 06/04/2020
 
 .testimonials a {
     font-weight: 700;
-    font-size: 14px;
+    font-size: 18px;
     color: #468594;
+    text-decoration: none;
 }
 
  /* Slideshow container */
