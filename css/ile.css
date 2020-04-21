@@ -128,7 +128,7 @@ Date de création : 06/04/2020
   .histoire img {
     margin-right: 0px;
     width: 40%;
-    bottom: -15%;
+    bottom: -55px;
     right: 10px;
   }
 
@@ -146,9 +146,9 @@ Date de création : 06/04/2020
   }
 }
 
-@media screen and (max-width:420px) {
+@media screen and (max-width:465px) {
   .histoire img {
-    bottom: 0;
+    bottom: -20px;
   }
 }
 
