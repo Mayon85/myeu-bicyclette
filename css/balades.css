@@ -161,6 +161,7 @@ Date de création : 06/04/2020
     -webkit-box-align: center;
             align-items: center;
     position: relative;
+    justify-content: space-evenly;
 }
 
 .modal-content {
@@ -212,11 +213,52 @@ Date de création : 06/04/2020
 
 .modal-content p {
     padding: 30px 20px 30px 0;
+    line-height: 20px;
+}
+
+.modal-content p span {
+    color: #888;
+}
+
+.modal-content ul {
+    margin-left: 20px;
+}
+
+.modal-content ul li {
+    font-family: 'Montserrat', arial, sans-serif;
+    line-height: 24px;
+    font-size: 13px;
+    list-style: none;
+}
+
+.modal-content ul li:before {
+    content: "→ ";
+}
+
+.etapes p {
+    padding: 10px 0;
+}
+
+.etapes i {
+    color: #468594;
+    margin-right: 5px;
+    font-size: 20px;
 }
 
 .modal-content img {
+    height: 600px;
     width: 450px;
-    height: auto;
+}
+
+.btn-plan {
+    margin-top: 30px;
+    line-height:30px;
+}
+
+.btn-plan span {
+    font-size: 12px;
+    font-weight: 300;
+    text-transform: lowercase;
 }
 
 .close {
@@ -392,6 +434,10 @@ Date de création : 06/04/2020
 
     #balades .logo {
         top: 10px;
+    }
+
+    .btn-plan {
+        font-size: 12px;
     }
 }
 
