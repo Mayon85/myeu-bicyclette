@@ -386,8 +386,12 @@ Date de création : 06/04/2020
 }
 
 @media screen and (max-width: 576px) {
-    .btn-balade {
-        width: 100%;
+    #balades .cadre {
+        margin-bottom: 35%;
+    }
+
+    #balades .logo {
+        top: 10px;
     }
 }
 
