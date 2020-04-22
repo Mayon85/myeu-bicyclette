@@ -103,6 +103,7 @@ Date de création : 06/04/2020
     -webkit-box-direction: normal;
             flex-direction: column;
     padding: 40px;
+    z-index: 0;
 }
 
 .btn-balade {
@@ -135,7 +136,7 @@ Date de création : 06/04/2020
 .modal {
     display: none;
     position: fixed;
-    z-index: 1;
+    z-index: 10;
     left: 0;
     top: 0;
     width: 100%;
