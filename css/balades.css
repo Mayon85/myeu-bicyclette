@@ -246,8 +246,8 @@ Date de création : 06/04/2020
 }
 
 .modal-content img {
-    height: 600px;
     width: 450px;
+    height: auto;
 }
 
 .btn-plan {
@@ -388,8 +388,14 @@ Date de création : 06/04/2020
 /********* RESPONSIVE ***********************************/
 
 @media screen and (max-width:992px) {
+    .modal-content {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+                flex-direction: column;
+    }
+
     .modal-content img {
-        width: 300px;
+        padding-top: 15px;
     }
 
     .container-balades .box {
@@ -402,23 +408,14 @@ Date de création : 06/04/2020
     }
 }
 
-@media screen and (max-width:768px) {
-    .modal-content {
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-                flex-direction: column;
-    }
-
-    .modal-content img {
-        padding-top: 15px;
-        width: 100%;
-    }
-}
-
 @media screen and (max-width:667px) {
     .container-balades .box {
         width: 200px;
         height: 140px;
+    }
+
+    .modal-content img {
+        width: 300px;
     }
 
     .btn-balade {
@@ -434,6 +431,10 @@ Date de création : 06/04/2020
 
     #balades .logo {
         top: 10px;
+    }
+
+    .modal-content img {
+        width: 200px;
     }
 
     .btn-plan {
