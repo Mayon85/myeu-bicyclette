@@ -27,7 +27,7 @@ Date de création : 06/04/2020
     background: url(../ressources/heros/hero-securite.png);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center top;
+    background-position: center;
     background-attachment: fixed;
     
     overflow: hidden;
