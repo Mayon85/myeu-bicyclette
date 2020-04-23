@@ -39,6 +39,7 @@ Date de création : 06/04/2020
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
             flex-direction: column;
+    overflow: hidden;
 }
 
 #page-securite h2 {

@@ -12,6 +12,7 @@ Date de création : 06/04/2020
 /*** PRESENTATION **********************************************/
 .page1 {
   margin-top: 80px;
+  overflow: hidden;
 }
 
 #presentation {
