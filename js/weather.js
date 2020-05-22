@@ -3,6 +3,7 @@
 const showDate = document.querySelector(".display-date p");
 const iconElement = document.querySelector(".weather-icon");
 const tempElement = document.querySelector(".temperature-value p");
+const descElement = document.querySelector(".temperature-description p");
 
 // DISPLAY DATE AND TIME
 
@@ -42,6 +43,7 @@ function getWeather(latitude, longitude) {
     })
     .then(function(data) {
         weather.temperature.value = Math.floor(data.main.temp - KELVIN);
+        weather.description = data.weather[0].description;
         // weather.iconId = data.weather[0].icon;
     })
     .then(function() {
@@ -49,11 +51,10 @@ function getWeather(latitude, longitude) {
     });
 }
 
-getWeather(46.7252,-2.3494)
-
 // DISPLAY WEATHER 
 function displayWeather () {
     iconElement.innerHTML = `<img src="./ressources/weather-icons/${weather.iconId}.png"/>`;
     tempElement.innerHTML = `${weather.temperature.value}°<span>C</span>`;
-
+    descElement.innerHTML = weather.description ;
 }
+

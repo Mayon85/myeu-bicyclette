@@ -694,16 +694,47 @@ footer a {
 /*** WEATHER CARD ***/
 
 .weather-container {
-    border-radius: 20px;
-    padding: 20px;
-    background-color: rgba(255, 255, 255, 0.557);
-    width: 30%;
+    border-radius: 40% 40% 0 0;
+    padding: 20px 10px;
+    width: 15%;
     margin-top: 50px;
+    background-color: #468594;
+    position: absolute;
+    bottom: -150px;
+    right: 0;
+    text-align: center;
+    color: #fff;
+    transition: all 1s ease;
 }
 
-.display-date, .location {
-    text-align: center;
+.weather-container:hover {
+    transform: translateY(-150px);
 }
+
+.weather-container h3 {
+    padding-top: 10px;
+}
+
+.display-date p, .temperature-description p {
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.display-date {
+    position: relative;
+}
+
+.display-date:after{
+    content: "";
+    width: 50px;
+    height: 1px;
+    background-color: #fff;
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translate(-50%);
+}
+
 
 .value {
     display: flex;
@@ -718,5 +749,5 @@ footer a {
 }
 .temperature-value p {
     font-size: 16px;
-    color: #468594;
+    color: black;
 }
