@@ -689,3 +689,34 @@ footer a {
     -webkit-animation-name: pulse;
     animation-name: pulse;
 }
+
+
+/*** WEATHER CARD ***/
+
+.weather-container {
+    border-radius: 20px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.557);
+    width: 30%;
+    margin-top: 50px;
+}
+
+.display-date, .location {
+    text-align: center;
+}
+
+.value {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.weather-icon img {
+    height: 100px;
+    width: auto;
+    padding-right: 50px;
+}
+.temperature-value p {
+    font-size: 16px;
+    color: #468594;
+}

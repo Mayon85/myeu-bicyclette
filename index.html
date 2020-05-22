@@ -52,7 +52,7 @@
     <meta name="theme-color" content="#468594">
 
     <!-- CSS ------------------------>
-    <link rel="stylesheet" href="./css/style.min.css">
+    <link rel="stylesheet" href="./css/style.css">
 
     <!-- ICONS & FONTS ------------------------>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800&display=swap"
@@ -113,15 +113,30 @@
 
         <a class="button button-home" href="/pages/balades.html">Découvrir les balades à vélo</a>
 
+        <div class="weather-container">
+            <div class="display-date"><p></p></div>
+
+            <div class="value">
+                <div class="weather-icon"><img src="./ressources/weather-icons/unknown.png" alt=""></div>
+                <div class="temperature-value">
+                    <p>- °C</p>
+                </div>
+            </div>
+
+            <div class="location"><p>Port-Joinville, Île d'Yeu</p></div>
+
+        </div>
+
         <div class="reseaux">
-            <a href="https://www.ile-yeu.fr/" target="_blank" rel="noreferrer"><img src="./ressources/office-tourime-yeu.png"
-                    alt="logo de l'office de tourisme de l'île d'Yeu"></a>
-            <a href="https://www.vendee-tourisme.com/" target="_blank" rel="noreferrer"><img src="./ressources/vendee-logo.png"
-                    alt="logo de Vendée Tourisme"></a>
+            <a href="https://www.ile-yeu.fr/" target="_blank" rel="noreferrer"><img
+                    src="./ressources/office-tourime-yeu.png" alt="logo de l'office de tourisme de l'île d'Yeu"></a>
+            <a href="https://www.vendee-tourisme.com/" target="_blank" rel="noreferrer"><img
+                    src="./ressources/vendee-logo.png" alt="logo de Vendée Tourisme"></a>
         </div>
 
     </header>
 
+    <script src="./js/weather.js"></script>
 </body>
 
 </html>
