@@ -19,20 +19,18 @@ showDate.innerHTML = current_date;
 
 
 // APP DATA
-const KELVIN = 273;
 const weather = {}; 
-
-weather.temperature = {
-    unit : "celcius"
-}
+weather.temperature = {};
 
 // GET WEATHER
 // ILE D'YEU COORDS : latitude = 46.7252; longitude = -2.3494;
 
 const key = "cb32c7b51eb9bb812fbb0e2c4b498c5a";
+const latitude = 46.7252;
+const longitude = -2.3494;
 
-function getWeather(latitude, longitude) {
-    let api = `https://api.openweathermap.org/data/2.5/weather?lat=46.7252&lon=-2.3494&appid=${key}&lang=fr`;
+function getWeather() {
+    let api = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${key}&lang=fr&units=metric`;
 
     fetch(api)
     .then(function(response){
@@ -40,7 +38,7 @@ function getWeather(latitude, longitude) {
         return data;
     })
     .then(function(data) {
-        weather.temperature.value = Math.floor(data.main.temp - KELVIN);
+        weather.temperature.value = Math.floor(data.main.temp);
         weather.description = data.weather[0].description;
         weather.iconId = data.weather[0].icon;
     })
@@ -52,7 +50,10 @@ function getWeather(latitude, longitude) {
 
 // DISPLAY WEATHER 
 function displayWeather () {
-    iconElement.innerHTML = `<img src="icons/${weather.iconId}.png"/>`;
+    iconElement.innerHTML = `<img src="./ressources/weather-icons/${weather.iconId}.png"/>`;
     tempElement.innerHTML = `${weather.temperature.value}°<span>C</span>`;
     descElement.innerHTML = weather.description;
+    descElement.style.textTransform = "capitalize";
 }
+
+window.onload = getWeather()
