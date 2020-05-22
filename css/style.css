@@ -435,17 +435,6 @@ nav img {
         font-size: 1.2em;
     }
 
-    .reseaux {
-        position: relative;
-        right: 0;
-        bottom: -100px;
-        background: none;
-    }
-
-    .reseaux img {
-        height: 25px;
-    }
-
     .cadre {
         margin-right: 25%;
         margin-bottom: 15%;
@@ -696,7 +685,7 @@ footer a {
 .weather-container {
     border-radius: 40% 40% 0 0;
     padding: 20px 10px;
-    width: 15%;
+    width: 240px;
     margin-top: 50px;
     background-color: #468594;
     position: absolute;
@@ -705,6 +694,7 @@ footer a {
     text-align: center;
     color: #fff;
     transition: all 1s ease;
+    z-index: 1;
 }
 
 .weather-container:hover {
@@ -715,7 +705,8 @@ footer a {
     padding-top: 10px;
 }
 
-.display-date p, .temperature-description p {
+.display-date p,
+.temperature-description p {
     color: #fff;
     margin-bottom: 10px;
 }
@@ -724,7 +715,7 @@ footer a {
     position: relative;
 }
 
-.display-date:after{
+.display-date:after {
     content: "";
     width: 50px;
     height: 1px;
@@ -735,7 +726,6 @@ footer a {
     transform: translate(-50%);
 }
 
-
 .value {
     display: flex;
     justify-content: center;
@@ -743,11 +733,29 @@ footer a {
 }
 
 .weather-icon img {
-    height: 100px;
-    width: auto;
+    width: 150px;
+    height: auto;
     padding-right: 50px;
 }
+
 .temperature-value p {
     font-size: 16px;
-    color: black;
+    color: #333;
+}
+
+
+@media screen and (max-width: 576px) {
+    .weather-container {
+        width: 150px;
+        font-size: 0.8em;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%);
+        bottom: 0;
+        padding: 8px;
+    }
+
+    .weather-icon img {
+        width: 100px;
+    }
 }

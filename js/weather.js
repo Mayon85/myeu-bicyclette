@@ -19,14 +19,12 @@ showDate.innerHTML = current_date;
 
 
 // APP DATA
+const KELVIN = 273;
 const weather = {}; 
 
 weather.temperature = {
     unit : "celcius"
 }
-
-// APP CONSTS AND VARS
-const KELVIN = 273;
 
 // GET WEATHER
 // ILE D'YEU COORDS : latitude = 46.7252; longitude = -2.3494;
@@ -44,17 +42,17 @@ function getWeather(latitude, longitude) {
     .then(function(data) {
         weather.temperature.value = Math.floor(data.main.temp - KELVIN);
         weather.description = data.weather[0].description;
-        // weather.iconId = data.weather[0].icon;
+        weather.iconId = data.weather[0].icon;
     })
     .then(function() {
         displayWeather();
-    });
+    })
+
 }
 
 // DISPLAY WEATHER 
 function displayWeather () {
-    iconElement.innerHTML = `<img src="./ressources/weather-icons/${weather.iconId}.png"/>`;
+    iconElement.innerHTML = `<img src="icons/${weather.iconId}.png"/>`;
     tempElement.innerHTML = `${weather.temperature.value}°<span>C</span>`;
-    descElement.innerHTML = weather.description ;
+    descElement.innerHTML = weather.description;
 }
-
