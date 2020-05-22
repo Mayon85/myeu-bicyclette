@@ -695,6 +695,7 @@ footer a {
     color: #fff;
     transition: all 1s ease;
     z-index: 1;
+    border: #fff 1px solid;
 }
 
 .weather-container:hover {
@@ -753,6 +754,10 @@ footer a {
         transform: translate(-50%);
         bottom: 0;
         padding: 8px;
+    }
+
+    .weather-container:hover {
+        transform: none
     }
 
     .weather-icon img {
