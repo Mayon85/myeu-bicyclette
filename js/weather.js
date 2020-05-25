@@ -50,7 +50,7 @@ function getWeather() {
 
 // DISPLAY WEATHER 
 function displayWeather () {
-    iconElement.innerHTML = `<img src="./ressources/weather-icons/${weather.iconId}.png"/>`;
+    iconElement.innerHTML = `<img src="./ressources/weather-icons/${weather.iconId}.png" alt=""/>`;
     tempElement.innerHTML = `${weather.temperature.value}°<span>C</span>`;
     descElement.innerHTML = weather.description;
     descElement.style.textTransform = "capitalize";
